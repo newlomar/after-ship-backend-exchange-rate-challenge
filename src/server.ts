@@ -8,10 +8,12 @@ const route = Router();
 
 app.use(express.json());
 
-route.get("/", (req: Request, res: Response) => {
+route.get("/", (req, res) => {
   res.json({ message: "Hello world, with typescript!" });
 });
 
 app.use(route);
 
-app.listen(3333, () => "server is running on port 3333");
+app.listen(3333, () => {
+  console.log("server is running on port 3333");
+});
